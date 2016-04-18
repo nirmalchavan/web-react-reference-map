@@ -1,0 +1,52 @@
+{
+    "src_folders": ["test"],
+    "output_folder": "test/EndToEnd/results/",
+
+    "selenium": {
+        "start_process": true,
+        "server_path": "./node_modules/selenium-server-standalone-jar/jar/selenium-server-standalone-2.45.0.jar",
+        "cli_args" : {
+            "webdriver.chrome.driver" : "./node_modules/chromedriver/lib/chromedriver/chromedriver.exe",
+            "webdriver.ie.driver" : "./node_modules/iedriver/lib/iedriver/IEDriverServer.exe",
+            "phantomjs.binary.path" : "./node_modules/phantomjs/lib/phantom/bin/phantomjs.exe"
+        }
+    },
+
+    "test_settings": {
+        "default": {
+            "desiredCapabilities": {
+                "browserName": "firefox",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true
+            }
+        },
+        "ie" : {
+            "desiredCapabilities": {
+                "browserName": "internet explorer"
+            }
+        },
+        "chrome" : {
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true
+            }
+        },
+        "firefox" : {
+            "desiredCapabilities": {
+                "browserName": "firefox"
+            }
+        },
+        "phantomjs" : {
+            "desiredCapabilities": {
+                "browserName" : "phantomjs",
+                "javascriptEnabled" : true,
+                "acceptSslCerts" : true,
+                "screenshots" : {
+                    "enebled": true,
+                    "path" : "tests/screenshots/phantomjs"
+                }
+            }
+        }
+    }
+}

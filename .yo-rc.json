@@ -1,0 +1,8 @@
+{
+  "generator-esi": {
+    "actionName": "mapAction",
+    "componentName": "Map",
+    "containerName": "Map",
+    "reducerName": "mapReducer"
+  }
+}
