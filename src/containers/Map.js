@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import { fetchCreditCards } from '../actions/mapAction';
+
 
 
 class Map extends Component {
@@ -11,7 +13,7 @@ class Map extends Component {
 
     //React events
     componentDidMount() {
-
+        this.props.dispatch(fetchCreditCards());
     }
 
     render() {
@@ -30,7 +32,7 @@ function mapStateToProps(state){
 }
 
 Map.propTypes = {
-
+    dispatch: PropTypes.func.isRequired
 };
 
 

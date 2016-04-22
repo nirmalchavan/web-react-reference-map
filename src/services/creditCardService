@@ -1,0 +1,6 @@
+import fetch from 'isomorphic-fetch';
+
+export function fetchAll() {
+    return fetch('http://localhost:8000/creditCards')
+        .then(response => response.json());
+}
